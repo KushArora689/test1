@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
+    <link
+      rel="stylesheet" href="../static/css/main.css"
+    />
+
+</head>
+<body>
+
+      <header id="header">
+              <h1>CS235 2023: My Game Library</h1>
+              <input type="text" placeholder="Search..">
+              <div class="copyright">&copy; karo894 | ndha984 | nlaw679 (Write your full names or UPIs) </div>
+
+
+            </header>
+<div class="sidebar">
+    <img src="static/controller-nobg.png" alt="logo" class="logo" width="90%">
+<div>Home</div>
+
+
+<div>Game Library (type in /browse to get here please)</div>
+<div>Game Descriptions (doesnt work :( )</div>
+
+</div>
+      <div style="margin-left:15%">
+            <div id="container">
+                <p>Welcome to our game library website! You can browse and view information about our selection of games right here.</p> <br>
+                    <p>You can find everything about each game, including its price, release date, developer, and other details, on its own page </p><br>
+                    <p>Our website is designed to provide you with an immersive and engaging experience as you discover new games
+                    to play. We hope you enjoy browsing our game library and finding your next favorite game! </p>
+
+                <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="picture">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/7940/header.jpg?t=1646762118" alt="">
+        </div>
+        <div class="detail">
+          <h3>1</h3>
+          <span>Call of Duty® 4: Modern Warfare® <br> Nov 12, 2007</span>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="picture">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1228870/header.jpg?t=1601679243" alt="">
+        </div>
+        <div class="detail">
+          <h3>2</h3>
+          <span>Bartlow's Dread Machine <br> Sep 29, 2020</span>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="picture">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/311120/header.jpg?t=1658420650" alt="">
+        </div>
+        <div class="detail">
+          <h3>3</h3>
+          <span>The Stalin Subway: Red Veil <br> Oct 24, 2014</span>
+        </div>
+      </div>
+
+        <div class="swiper-slide">
+        <div class="picture">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/410320/header.jpg?t=1652254429" alt="">
+        </div>
+        <div class="detail">
+          <h3>4</h3>
+          <span>EARTH DEFENSE FORCE 4.1 The Shadow of New Despair <br> Jul 18, 2016</span>
+        </div>
+      </div>
+
+
+        <div class="swiper-slide">
+        <div class="picture">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1621490/header.jpg?t=1655643714" alt="">
+        </div>
+        <div class="detail">
+          <h3>5</h3>
+          <span>MagicShop3D <br> Jun 19, 2022</span>
+        </div>
+      </div>
+
+    </div>
+        <div class="swiper-pagination"></div>
+        <br>
+       </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
+    <script>
+    var swiper = new Swiper(".swiper-container", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+    </script>
+
+
+
+
+</div>
+      </div>
+
+
+
+
+</body>
+</html>

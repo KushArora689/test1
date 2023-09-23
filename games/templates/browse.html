@@ -1,0 +1,26 @@
+
+
+<html lang="en">
+<head>
+    <link
+      rel="stylesheet" href="../static/css/main.css"
+    />
+<title>Hello</title>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to our latest Game Collection</h1>
+        <br>
+        <br>
+        {% for game in games %}
+            <h2>Game: {{game.title}}</h2>
+            <h3>Game ID: {{game.game_url}}</h3>
+            <img src = "{{ game.image_url }}" alt ="">
+
+
+        {% endfor %}
+    </div>
+</body>
+
+</html>
