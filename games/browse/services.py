@@ -12,11 +12,15 @@ def get_games(repo: AbstractRepository):
     for game in games:
         game_dict = {
             'game_id': game.game_id,
+            'release_date': game.release_date,
+            'price': game.price,
+            'publisher': game.publisher,
             'title': game.title,
-            'game_url': game.genres,
+            'description': game.description,
+            'image_url': game.image_url
         }
         game_dicts.append(game_dict)
-    return game_dicts
+    return sorted(game_dicts, key=lambda x: x["title"])
 
 
 def get_g(repo: AbstractRepository):

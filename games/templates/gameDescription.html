@@ -22,21 +22,21 @@
             </header>
 <div class="sidebar">
     <img src="static/controller-nobg.png" alt="logo" class="logo" width="90%">
-<div>Home</div>
 
 
 
 
 
-<div> (type in /browse to get here please)</div>
-<div>Game Descriptions (doesnt work :( )</div>
-<div><a href="{{ url_for('games_bp.browse_games') }}">Game Library</a></div>
 
+
+<div><a class="btn-nav" href="{{ url_for('games_bp.browse_games') }}">All Games</a></div>
+<div>
+<div> Browse by Genres</div>
 {% for genre in gzz %}
-  <a class="btn-nav" href="{{ url_for('games_bp.browse_games_by_genre', genre=genre) }}">{{ genre }}</a>
+  <a class="btn-nav2" href="{{ url_for('games_bp.browse_games_by_genre', genre=genre) }}">{{ genre }}</a>
 
 {% endfor %}
-
+</div>
 </div>
       <div style="margin-left:15%">
             <div id="container">

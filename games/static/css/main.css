@@ -26,7 +26,6 @@ input[type=text] {
   font-size: 17px;
 }
 .sidebar {
-height: 100%;
 width: 9%;
 position: absolute;
 left: 0;
@@ -34,7 +33,7 @@ top: 0;
 padding-top: 30px;
 background-color: #fc5d5d;
 border-right: 1px solid #e0e4e8;
-border-top: 8px solid #262626;
+border-top: 8px solid #fc5d5d;
 }
 
 .sidebar div {
@@ -116,4 +115,66 @@ display: block;
 
 .swiper-pagination-bullet-active {
      background-color: #fc5d5d !important;
+}
+.z{
+
+    transition: all 1.8s ease 0s;
+
+}
+.z:hover{
+    transform: scale(1.08);
+    margin-left: 1vw;
+    transition: all 1.3s ease 0s;
+}
+.gamepicture {
+    display: inline-block;
+
+}
+
+.gameinfo {
+  text-align: justify;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.3s ease, opacity 1.3s ease;
+}
+
+.gameinfo h3 {
+  margin: 0;
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+.gamepicture:hover + .gameinfo {
+  max-height: 1000px;
+  opacity: 1;
+}
+.btn-nav {
+  padding: 10px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: block;
+
+}
+
+.btn-nav:hover {
+  background-color: #594f8d;
+  color: #fff;
+}
+.btn-nav2 {
+  padding: 10px;
+  font-size: 0.5vw;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: block;
+
+}
+
+.btn-nav2:hover {
+  background-color: #594f8d;
+  color: #fff;
 }
