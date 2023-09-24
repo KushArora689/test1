@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <div>
+        <h1>Welcome to our latest {{ selected_genre }} Game Collection</h1>
+        <h4>Hover to view</h4>
+        {% for game in games %}
+            <br>
+            <h2>Game: {{ game.title }}</h2>
+            <div class="gamepicture">
+                <img class="z" src="{{ game.image_url }}" alt="header">
+            </div>
+            <div class="gameinfo">
+                <h3>Description: {{ game.description }} <br><br>
+                    GameID: {{ game.game_id }} <br><br>
+                    Release Date: {{ game.release_date }} <br><br>
+                    Price: {{ game.price }} <br><br>
+                    Publisher(s): {{ game.publisher }}
+                </h3>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

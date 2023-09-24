@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+</head>
+<body>
+
+      <header id="header">
+              {% if 'username' in session %} Welcome, {{ session['username'] }} 
+              {% endif %}
+              <h1>CS235 2023: My Game Library</h1>
+              <div class="copyright">&copy; karo894 | ndha984 | nlaw679 (Write your full names or UPIs) </div>
+
+
+            </header>
+
+<div class="sidebar">
+
+    <img src="{{ url_for('static', filename='controller-nobg.png') }}" alt="logo" class="logo" width="90%">
+    <div><a class="btn-nav" href="{{ url_for('games_bp.register') }}">Register</a></div>
+    <div><a class="btn-nav" href="{{ url_for('games_bp.login') }}">Login</a></div>
+    <div><a class="btn-nav" href="{{ url_for('games_bp.browse_games') }}">All Games</a></div>
+
+    <div> Browse by Genres </div>
+    {% for genre in gzz %}
+        <a class="btn-nav2" href="{{ url_for('games_bp.browse_games_by_genre', genre=genre) }}">{{ genre }}</a>
+    
+    {% endfor %}
+
+</div>
+
+
+      <div style="margin-left:15%">
+          {% block content %} {% endblock %}
+      </div>
+
+
+
+
+
+</body>
+</html>

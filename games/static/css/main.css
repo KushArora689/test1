@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+#header {
+  padding: 20px;
+  background: #fc5d5d;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+body {
+    background-color:#262626;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+.logo{
+
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+
+.sidebar {
+height: 100%;
+width: 9%;
+position: fixed;
+left: 0;
+top: 0;
+padding-top: 30px;
+background-color: #fc5d5d;
+border-right: 1px solid #e0e4e8;
+
+}
+
+.sidebar div {
+padding: 8px;
+font-size: 22px;
+display: block;
+}
+
+.copyright {
+  color: black;
+  font-size: 0.9em;
+  text-align:center;
+  padding-left: 210px;
+}
+
+.description p i {
+    font-family: 'Gill Sans';
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    color:darkslateblue
+    }
+
+.description img {
+        vertical-align: top;
+    }
+.swiper-container {
+  width: 60%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+ul {
+  list-style-type: none;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-color: #222222;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.picture {
+  width: 100%;
+  height: 700px;
+
+  overflow: hidden;
+}
+
+.picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+     object-fit: cover;
+}
+
+.detail {
+  padding: 25px 10px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+}
+
+.picture:hover + .detail {
+  opacity: 100;
+}
+
+.detail h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.detail span {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+     background-color: #fc5d5d !important;
+}
+.z{
+
+    transition: all 1.8s ease 0s;
+
+}
+.z:hover{
+    transform: scale(1.08);
+    margin-left: 1vw;
+    transition: all 1.3s ease 0s;
+}
+.gamepicture {
+    display: inline-block;
+
+}
+
+.gameinfo {
+  text-align: justify;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.3s ease, opacity 1.3s ease;
+}
+
+.gameinfo h3 {
+  margin: 0;
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+.gamepicture:hover + .gameinfo {
+  max-height: 1000px;
+  opacity: 1;
+}
+.btn-nav {
+  padding: 10px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: block;
+
+}
+
+.btn-nav:hover {
+  background-color: #594f8d;
+  color: #fff;
+}
+.btn-nav2 {
+  padding: 10px;
+  font-size: 0.5vw;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: block;
+
+}
+
+.btn-nav2:hover {
+  background-color: #594f8d;
+  color: #fff;
+}
+
+input[type='text'],
+    select {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+input[type='password'],
+    select {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+
+input[type='submit'] {
+    width: 60%;
+    background-color: rgb(144, 114, 103);
+    color: white;
+    padding: 18px 20px;
+    margin: 5vw 10vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+input[type='submit']:hover {
+  background-color: red;
+}
