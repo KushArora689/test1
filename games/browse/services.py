@@ -39,5 +39,10 @@ def get_games_by_genre(repo: AbstractRepository, genre):
                 games_by_genre.append(game)
             break
 
-
     return games_by_genre
+
+def get_games_by_page(repo: AbstractRepository, page_no, per_page):
+    all_games = repo.get_games()
+    start_index = (page_no - 1) * per_page
+    end_index = start_index + per_page
+    return all_games[start_index:end_index]

@@ -1,5 +1,3 @@
-
-
 <html lang="en">
 <head>
     <link
@@ -12,6 +10,24 @@
     <div>
         <h1>Welcome to our latest Game Collection</h1>
         <h4> Hover to view </h4>
+
+<div class="pagination">
+    <a href="{{ url_for('games_bp.browse_games', page=1) }}">First</a>
+    {% if current_page == 1 %}
+        <a href="{{ url_for('games_bp.browse_games', page=99) }}">Previous</a>
+    {% else %}
+        <a href="{{ url_for('games_bp.browse_games', page=current_page - 1) }}">Previous</a>
+    {% endif %}
+
+    {% if current_page == 99 %}
+        <a href="{{ url_for('games_bp.browse_games', page=1) }} ">Next</a>
+    {% else %}
+        <a href="{{ url_for('games_bp.browse_games', page=current_page + 1) }}">Next</a>
+    {% endif %}
+    <a href="{{ url_for('games_bp.browse_games', page=99) }}">Last</a>
+</div>
+
+
         {% for game in games %}
             <br>
             <h2>Game: {{game.title}}</h2>
@@ -31,5 +47,6 @@
         {% endfor %}
     </div>
 </body>
+
 
 </html>

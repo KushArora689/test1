@@ -13,14 +13,18 @@ def browse_games():
     num_games = services.get_number_of_games(repo.repo_instance)
     all_games = services.get_games(repo.repo_instance)
     get_g2 = services.get_g(repo.repo_instance)
-
+    page_no = int(request.args.get('page', 1))
+    per_page = 10
+    games = services.get_games_by_page(repo.repo_instance, page_no, per_page)
     return render_template(
         'browse.html',
         title=f'Browse Games | CS235 Game Library',
         heading='Browse Games',
-        games=all_games,
+        games=games,
         num_games=num_games,
-        gz=get_g2
+        gz=get_g2,
+        current_page=page_no,
+        per_page=per_page
     )
 
 

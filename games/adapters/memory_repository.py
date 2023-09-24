@@ -31,6 +31,10 @@ class MemoryRepository(AbstractRepository):
 
         genre = reader.dataset_of_genres
         return genre
+    def get_games_by_page(self, page_no, per_page):
+        start_index = (page_no - 1) * per_page
+        end_index = start_index + per_page
+        return self.__games[start_index: end_index]
 
 
 def populate(repo: AbstractRepository):
