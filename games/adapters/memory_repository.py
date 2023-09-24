@@ -5,6 +5,7 @@ import os
 from games import Game
 from games.adapters.datareader.csvdatareader import GameFileCSVReader
 from games.adapters.repository import AbstractRepository
+from games.domainmodel.model import Genre
 
 
 class MemoryRepository(AbstractRepository):
@@ -21,6 +22,15 @@ class MemoryRepository(AbstractRepository):
 
     def get_number_of_games(self):
         return len(self.__games)
+
+    def get_genres(self) -> List[Genre]:
+        dir_name = os.path.dirname(os.path.abspath(__file__))
+        games_file_name = os.path.join(dir_name, "data/games.csv")
+        reader = GameFileCSVReader(games_file_name)
+        reader.read_csv_file()
+
+        genre = reader.dataset_of_genres
+        return genre
 
 
 def populate(repo: AbstractRepository):

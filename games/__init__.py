@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template
 
+from games.browse import services
 # TODO: Access to the games should be implemented via the repository pattern and using blueprints, so this can not
 #  stay here!
 from games.domainmodel.model import Game
@@ -38,7 +39,7 @@ def create_app():
     def home():
         some_game = create_some_game()
         # Use Jinja to customize a predefined html page rendering the layout for showing a single game.
-        return render_template('gameDescription.html', game=some_game)
+        return render_template('gameDescription.html', game=some_game, gzz = services.get_g(repo.repo_instance))
 
     return app
 

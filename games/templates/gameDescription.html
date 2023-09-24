@@ -25,8 +25,17 @@
 <div>Home</div>
 
 
-<div>Game Library (type in /browse to get here please)</div>
+
+
+
+<div> (type in /browse to get here please)</div>
 <div>Game Descriptions (doesnt work :( )</div>
+<div><a href="{{ url_for('games_bp.browse_games') }}">Game Library</a></div>
+
+{% for genre in gzz %}
+  <a class="btn-nav" href="{{ url_for('games_bp.browse_games_by_genre', genre=genre) }}">{{ genre }}</a>
+
+{% endfor %}
 
 </div>
       <div style="margin-left:15%">
